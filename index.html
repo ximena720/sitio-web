@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elegancia Natural - Estética</title>
-    
+    <link rel="stylesheet" href="stylos.css">
 </head>
 <body>
 
@@ -16,6 +16,7 @@
             <a href="#servicios">Servicios</a>
             <a href="#agendar">Agendar Cita</a>
             <a href="#nosotros">Sobre Nosotros</a>
+            <a href="#Conocenos"> Conocenos</a>
         </nav>
     </header>
 
@@ -116,7 +117,7 @@
                     </div>
                 </div>
 
-                <!-- Columna Derecha: Horarios Disponibles -->
+                
                 <div class="card-box">
                     <h3>3. Horarios disponibles</h3>
                     <div class="time-slots">
@@ -170,6 +171,32 @@
             <button class="btn-primary" id="btnCloseModal">Aceptar y Cerrar</button>
         </div>
     </div>
+  
+       
+<section id="conocenos" class="conocenos-simple">
+    <div class="conocenos-container">
+        <h2>Conócenos</h2>
+        <p class="subtitulo">Conoce las mentes de este equipo</p>
+        
+     
+        <div class="imagen-equipo">
+            <img src="equpo.jpeg" alt="Equipo de trabajo">
+        </div>
+
+        
+        <div class="lista-nombres-container">
+            <ul class="lista-nombres">
+                <li>Ximena Vitela</li>
+                <li>Cintia Mora</li>
+                <li>Yisel Osegueda</li>
+                <li>Fatima Natali Rodriguez</li>
+            </ul>
+        </div>
+    </div>
+</section>
+    </div>
+</section>
+    </section>
 
     
     <footer id="nosotros">
@@ -262,7 +289,8 @@
             modalOverlay.classList.remove('active');
         });
     </script>
-<style>
+     <style>
+         
 * {
     box-sizing: border-box;
     margin: 0;
@@ -678,6 +706,75 @@ footer .copyright {
     font-size: 12px;
     color: #7f8c8d;
 }
-</style>
+/* Estilos para la sección Conócenos */
+.conocenos-simple {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.conocenos-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.conocenos-simple h2 {
+    font-size: 2.2rem;
+    color: #5a2a3a; /* Tono vino acorde a la página */
+    margin-bottom: 10px;
+}
+
+.conocenos-simple .subtitulo {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Estilo para la única imagen */
+.imagen-equipo {
+    width: 100%;
+    max-width: 350px;
+    height: 250px;
+    margin: 0 auto 30px auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    background-color: #e5d8db;
+}
+
+.imagen-equipo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.lista-nombres-container {
+    display: inline-block;
+}
+
+.lista-nombres {
+    list-style: none;
+    padding: 20px 40px;
+    margin: 0;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    text-align: left;
+    min-width: 250px;
+}
+
+.lista-nombres li {
+    font-size: 1.05rem;
+    color: #333;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.lista-nombres li:last-child {
+    border-bottom: none;
+}
+     </style>
 </body>
 </html>
