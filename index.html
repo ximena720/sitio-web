@@ -8,7 +8,6 @@
 </head>
 <body>
 
-    
     <header>
         <div class="logo">✨ Elegancia Natural</div>
         <nav>
@@ -16,18 +15,16 @@
             <a href="#servicios">Servicios</a>
             <a href="#agendar">Agendar Cita</a>
             <a href="#nosotros">Sobre Nosotros</a>
-            <a href="#Conocenos"> Conocenos</a>
+            <a href="#conocenos">Conócenos</a>
         </nav>
     </header>
 
-    
     <section id="inicio" class="hero-banner">
         <h1>Tu Belleza en Buenas Manos</h1>
         <p>Cortes, uñas, pestañas y maquillaje profesional para cada ocasión.</p>
         <a href="#agendar" class="btn-primary">Agendar una Cita</a>
     </section>
 
-    
     <section id="servicios" class="section">
         <h2 class="section-title">Nuestros Servicios</h2>
         <div class="services-grid">
@@ -54,12 +51,10 @@
         </div>
     </section>
 
-
     <section id="agendar" class="section">
         <h2 class="section-title">Agendar Cita</h2>
         <div class="booking-container">
-            
-        
+
             <div class="card-box service-selection-box">
                 <h3>1. Selecciona un servicio</h3>
                 <div class="service-options">
@@ -87,11 +82,27 @@
             </div>
 
             <div class="booking-grid">
-                
-              
+
                 <div class="card-box">
-                    <h3>2. Selecciona la fecha</h3>
-                    <div class="calendar-grid">
+                    <div style="display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 12px;">
+                        <h3 style="margin: 0;">2. Selecciona la fecha</h3>
+                        <select id="monthSelect" style="padding: 6px 10px; border-radius: 6px; border: 1px solid #ccc;">
+                            <option value="Ene" data-month-index="0">Enero</option>
+                            <option value="Feb" data-month-index="1">Febrero</option>
+                            <option value="Mar" data-month-index="2">Marzo</option>
+                            <option value="Abr" data-month-index="3">Abril</option>
+                            <option value="May" data-month-index="4">Mayo</option>
+                            <option value="Jun" data-month-index="5">Junio</option>
+                            <option value="Jul" data-month-index="6">Julio</option>
+                            <option value="Ago" data-month-index="7">Agosto</option>
+                            <option value="Sep" data-month-index="8">Septiembre</option>
+                            <option value="Oct" data-month-index="9">Octubre</option>
+                            <option value="Nov" data-month-index="10" selected>Noviembre</option>
+                            <option value="Dic" data-month-index="11">Diciembre</option>
+                        </select>
+                    </div>
+
+                    <div class="calendar-grid" id="calendarGrid">
                         <div class="day-name">LUN</div>
                         <div class="day-name">MAR</div>
                         <div class="day-name">MIE</div>
@@ -99,34 +110,19 @@
                         <div class="day-name">VIE</div>
                         <div class="day-name">SAB</div>
                         <div class="day-name">DOM</div>
-                        
-                        <div class="day-number" data-day="21 Oct">21</div>
-                        <div class="day-number disabled" title="Día Ocupado">22 <span class="tag-busy">Ocupado</span></div>
-                        <div class="day-number active" data-day="23 Oct">23</div>
-                        <div class="day-number" data-day="24 Oct">24</div>
-                        <div class="day-number" data-day="25 Oct">25</div>
-                        <div class="day-number disabled" title="Día Ocupado">26 <span class="tag-busy">Ocupado</span></div>
-                        <div class="day-number" data-day="27 Oct">27</div>
-                        <div class="day-number" data-day="28 Oct">28</div>
-                        <div class="day-number" data-day="29 Oct">29</div>
-                        <div class="day-number disabled" title="Día Ocupado">30 <span class="tag-busy">Ocupado</span></div>
-                        <div class="day-number" data-day="31 Oct">31</div>
-                        <div class="day-number" data-day="1 Nov">1</div>
-                        <div class="day-number" data-day="2 Nov">2</div>
-                        <div class="day-number" data-day="3 Nov">3</div>
+                        <!-- Los días reales de cada mes se generan con JavaScript -->
                     </div>
                 </div>
 
-                
                 <div class="card-box">
                     <h3>3. Horarios disponibles</h3>
                     <div class="time-slots">
                         <div class="slot" data-time="09:00 AM">09:00</div>
-                        <div class="slot disabled" title="Hora ocupada">09:30</div>
+                        <div class="slot" data-time="09:30 AM">09:30</div>
                         <div class="slot" data-time="10:00 AM">10:00</div>
                         <div class="slot active" data-time="10:30 AM">10:30</div>
                         <div class="slot" data-time="11:00 AM">11:00</div>
-                        <div class="slot disabled" title="Hora ocupada">11:30</div>
+                        <div class="slot" data-time="11:30 AM">11:30</div>
                         <div class="slot" data-time="12:00 PM">12:00</div>
                         <div class="slot" data-time="04:00 PM">16:00</div>
                         <div class="slot" data-time="04:30 PM">16:30</div>
@@ -143,10 +139,9 @@
                     <input type="tel" id="userPhone" placeholder="WhatsApp (Ej. 33 1234 5678)" required>
                 </div>
 
-           
                 <div class="summary-bar">
                     <span><strong>Servicio:</strong> <span id="summaryService">Corte de Cabello</span></span>
-                    <span><strong>Fecha y hora:</strong> <span id="summaryDate">23 Oct</span>, <span id="summaryTime">10:30 AM</span></span>
+                    <span><strong>Fecha y hora:</strong> <span id="summaryDate">1 Nov</span>, <span id="summaryTime">10:30 AM</span></span>
                     <span><strong>Total:</strong> $<span id="summaryPrice">25</span> USD</span>
                 </div>
 
@@ -155,7 +150,6 @@
         </div>
     </section>
 
-    
     <div class="modal-overlay" id="modalOverlay">
         <div class="modal-card">
             <div class="modal-icon">🎉</div>
@@ -171,34 +165,27 @@
             <button class="btn-primary" id="btnCloseModal">Aceptar y Cerrar</button>
         </div>
     </div>
-  
-       
-<section id="conocenos" class="conocenos-simple">
-    <div class="conocenos-container">
-        <h2>Conócenos</h2>
-        <p class="subtitulo">Conoce las mentes de este equipo</p>
-        
-     
-        <div class="imagen-equipo">
-            <img src="equpo.jpeg" alt="Equipo de trabajo">
-        </div>
 
-        
-        <div class="lista-nombres-container">
-            <ul class="lista-nombres">
-                <li>Ximena Vitela</li>
-                <li>Cintia Mora</li>
-                <li>Yisel Osegueda</li>
-                <li>Fatima Natali Rodriguez</li>
-            </ul>
+    <section id="conocenos" class="conocenos-simple">
+        <div class="conocenos-container">
+            <h2>Conócenos</h2>
+            <p class="subtitulo">Conoce las mentes de este equipo</p>
+
+            <div class="imagen-equipo">
+                <img src="equpo.jpeg" alt="Equipo de trabajo">
+            </div>
+
+            <div class="lista-nombres-container">
+                <ul class="lista-nombres">
+                    <li>Ximena Vitela</li>
+                    <li>Cintia Mora</li>
+                    <li>Yisel Osegueda</li>
+                    <li>Fatima Natali Rodriguez</li>
+                </ul>
+            </div>
         </div>
-    </div>
-</section>
-    </div>
-</section>
     </section>
 
-    
     <footer id="nosotros">
         <h2>Elegancia Natural Estética</h2>
         <p>Brindándote la mejor atención y los mejores productos para cuidar tu imagen.</p>
@@ -207,52 +194,149 @@
     </footer>
 
     <script>
-        
-        let selectedService = "Corte de Cabello";
-        let selectedPrice = "25";
-        let selectedDate = "23 Oct";
-        let selectedTime = "10:30 AM";
+        const calendarGrid = document.getElementById('calendarGrid');
+        const monthSelect = document.getElementById('monthSelect');
 
-        
         const summaryService = document.getElementById('summaryService');
         const summaryDate = document.getElementById('summaryDate');
         const summaryTime = document.getElementById('summaryTime');
         const summaryPrice = document.getElementById('summaryPrice');
 
+        // Año de referencia para calcular días reales (incluyendo bisiestos en febrero)
+        const currentYear = new Date().getFullYear();
+
+        let selectedService = "Corte de Cabello";
+        let selectedPrice = "25";
+        let selectedDayNum = 1;
+        let selectedMonth = monthSelect.value;
+        let selectedDate = `${selectedDayNum} ${selectedMonth}`;
+        let selectedTime = "10:30 AM";
+
+        // Mapa de horas ocupadas por fecha: { "1 Nov": ["10:30 AM", "04:00 PM"] }
+        let ocupadosPorFecha = {};
+
+        // Devuelve cuántos días reales tiene un mes (0 = Enero ... 11 = Diciembre)
+        function obtenerDiasDelMes(monthIndex, year = currentYear) {
+            return new Date(year, monthIndex + 1, 0).getDate();
+        }
+
+        // Generar días reales según el mes seleccionado
+        function renderCalendarDays() {
+            calendarGrid.querySelectorAll('.day-number').forEach(el => el.remove());
+
+            const selectedOption = monthSelect.options[monthSelect.selectedIndex];
+            const monthIndex = Number(selectedOption.getAttribute('data-month-index'));
+            selectedMonth = monthSelect.value;
+
+            const totalDias = obtenerDiasDelMes(monthIndex, currentYear);
+
+            // Si el día antes seleccionado supera los días del nuevo mes (ej. 31 en abril o febrero), ajustar al último día real
+            if (selectedDayNum > totalDias) {
+                selectedDayNum = totalDias;
+            }
+
+            const totalSlots = document.querySelectorAll('.slot').length;
+
+            for (let dia = 1; dia <= totalDias; dia++) {
+                const dayEl = document.createElement('div');
+                dayEl.className = 'day-number';
+                dayEl.setAttribute('data-day', `${dia} ${selectedMonth}`);
+                dayEl.textContent = dia;
+
+                if (dia === selectedDayNum) {
+                    dayEl.classList.add('active');
+                }
+
+                const horasDelDia = ocupadosPorFecha[`${dia} ${selectedMonth}`] || [];
+                if (horasDelDia.length >= totalSlots && totalSlots > 0) {
+                    const tag = document.createElement('span');
+                    tag.className = 'tag-busy';
+                    tag.textContent = 'Lleno';
+                    dayEl.appendChild(tag);
+                }
+
+                dayEl.addEventListener('click', () => {
+                    document.querySelectorAll('.day-number').forEach(d => d.classList.remove('active'));
+                    dayEl.classList.add('active');
+
+                    selectedDayNum = dia;
+                    selectedDate = `${selectedDayNum} ${selectedMonth}`;
+                    actualizarHorariosDelDia();
+                    updateSummary();
+                });
+
+                calendarGrid.appendChild(dayEl);
+            }
+
+            selectedDate = `${selectedDayNum} ${selectedMonth}`;
+            actualizarHorariosDelDia();
+            updateSummary();
+        }
+
+        // Bloquear solo las horas ocupadas en la fecha seleccionada; dejar libres las demás
+        function actualizarHorariosDelDia() {
+            const horasOcupadas = ocupadosPorFecha[selectedDate] || [];
+            const ocupadasSet = new Set(horasOcupadas);
+
+            const slots = Array.from(document.querySelectorAll('.slot'));
+
+            slots.forEach(slot => {
+                const hora = slot.getAttribute('data-time');
+                slot.classList.remove('disabled', 'active');
+                slot.removeAttribute('title');
+
+                if (ocupadasSet.has(hora)) {
+                    slot.classList.add('disabled');
+                    slot.setAttribute('title', 'Hora ocupada en este día');
+                }
+            });
+
+            // Mantener la hora elegida si sigue libre; si no, elegir la primera libre
+            const slotActualLibre = slots.find(s => s.getAttribute('data-time') === selectedTime && !s.classList.contains('disabled'));
+
+            if (slotActualLibre) {
+                slotActualLibre.classList.add('active');
+                selectedTime = slotActualLibre.getAttribute('data-time');
+            } else {
+                const primerSlotLibre = slots.find(s => !s.classList.contains('disabled'));
+                if (primerSlotLibre) {
+                    primerSlotLibre.classList.add('active');
+                    selectedTime = primerSlotLibre.getAttribute('data-time');
+                } else {
+                    selectedTime = "Sin horarios";
+                }
+            }
+        }
+
+        // Selección de servicio
         document.querySelectorAll('.service-opt').forEach(opt => {
             opt.addEventListener('click', () => {
                 document.querySelectorAll('.service-opt').forEach(s => s.classList.remove('active'));
                 opt.classList.add('active');
-                
+
                 selectedService = opt.getAttribute('data-name');
                 selectedPrice = opt.getAttribute('data-price');
                 updateSummary();
             });
         });
 
-
-        document.querySelectorAll('.day-number:not(.disabled)').forEach(day => {
-            day.addEventListener('click', () => {
-                document.querySelectorAll('.day-number').forEach(d => d.classList.remove('active'));
-                day.classList.add('active');
-                
-                selectedDate = day.getAttribute('data-day');
-                updateSummary();
-            });
-        });
-
-
-        document.querySelectorAll('.slot:not(.disabled)').forEach(slot => {
+        // Selección de horario
+        document.querySelectorAll('.slot').forEach(slot => {
             slot.addEventListener('click', () => {
+                if (slot.classList.contains('disabled')) return;
+
                 document.querySelectorAll('.slot').forEach(s => s.classList.remove('active'));
                 slot.classList.add('active');
-                
+
                 selectedTime = slot.getAttribute('data-time');
                 updateSummary();
             });
         });
 
-        
+        monthSelect.addEventListener('change', () => {
+            renderCalendarDays();
+        });
+
         function updateSummary() {
             summaryService.textContent = selectedService;
             summaryDate.textContent = selectedDate;
@@ -260,12 +344,27 @@
             summaryPrice.textContent = selectedPrice;
         }
 
-        
+        // Consultar disponibilidad real desde MySQL
+        async function cargarDisponibilidad() {
+            try {
+                const response = await fetch('obtener_disponibilidad.php');
+                const data = await response.json();
+
+                if (data.ok && data.ocupadosPorFecha) {
+                    ocupadosPorFecha = data.ocupadosPorFecha;
+                    renderCalendarDays();
+                }
+            } catch (error) {
+                console.error('Error al cargar disponibilidad:', error);
+            }
+        }
+
+        // Guardar cita en MySQL
         const btnConfirm = document.getElementById('btnConfirm');
         const modalOverlay = document.getElementById('modalOverlay');
         const btnCloseModal = document.getElementById('btnCloseModal');
 
-        btnConfirm.addEventListener('click', () => {
+        btnConfirm.addEventListener('click', async () => {
             const nameInput = document.getElementById('userName').value.trim();
             const phoneInput = document.getElementById('userPhone').value.trim();
 
@@ -274,24 +373,69 @@
                 return;
             }
 
-            document.getElementById('modalName').textContent = nameInput;
-            document.getElementById('modalPhone').textContent = phoneInput;
-            document.getElementById('modalService').textContent = selectedService;
-            document.getElementById('modalDate').textContent = selectedDate;
-            document.getElementById('modalTime').textContent = selectedTime;
-            document.getElementById('modalPrice').textContent = selectedPrice;
+            if (!selectedTime || selectedTime === "Sin horarios") {
+                alert('No hay horarios disponibles en la fecha seleccionada.');
+                return;
+            }
 
-           
-            modalOverlay.classList.add('active');
+            btnConfirm.disabled = true;
+            btnConfirm.textContent = 'Guardando...';
+
+            try {
+                const response = await fetch('guardar_cita.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        nombre: nameInput,
+                        telefono: phoneInput,
+                        servicio: selectedService,
+                        precio: selectedPrice,
+                        fecha: selectedDate,
+                        hora: selectedTime
+                    })
+                });
+
+                const data = await response.json();
+
+                if (!response.ok || !data.ok) {
+                    throw new Error(data.error || 'Error al registrar la cita');
+                }
+
+                document.getElementById('modalName').textContent = nameInput;
+                document.getElementById('modalPhone').textContent = phoneInput;
+                document.getElementById('modalService').textContent = selectedService;
+                document.getElementById('modalDate').textContent = selectedDate;
+                document.getElementById('modalTime').textContent = selectedTime;
+                document.getElementById('modalPrice').textContent = selectedPrice;
+
+                modalOverlay.classList.add('active');
+
+                document.getElementById('userName').value = '';
+                document.getElementById('userPhone').value = '';
+
+                await cargarDisponibilidad();
+
+            } catch (error) {
+                alert('Hubo un problema: ' + error.message);
+                await cargarDisponibilidad();
+            } finally {
+                btnConfirm.disabled = false;
+                btnConfirm.textContent = '✔ Confirmar cita';
+            }
         });
 
         btnCloseModal.addEventListener('click', () => {
             modalOverlay.classList.remove('active');
         });
+
+        // Iniciar calendario y disponibilidad
+        renderCalendarDays();
+        cargarDisponibilidad();
     </script>
-     <style>
-         
-* {
+    <style>
+        * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -775,6 +919,6 @@ footer .copyright {
 .lista-nombres li:last-child {
     border-bottom: none;
 }
-     </style>
+</style>
 </body>
 </html>
