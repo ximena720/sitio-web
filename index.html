@@ -1,429 +1,402 @@
-<!DOCTYPE html> 
-<html lang="es"> 
-<head> 
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Elegancia Natural - Estética</title> 
-    <link rel="stylesheet" href="stylos.css"> 
-</head> 
-<body> 
- 
-    <header> 
-        <div class="logo">
-✨
- Elegancia Natural</div> 
-        <nav> 
-            <a href="#inicio">Inicio</a> 
-            <a href="#servicios">Servicios</a> 
-            <a href="#agendar">Agendar Cita</a> 
-            <a href="#nosotros">Sobre Nosotros</a> 
-            <a href="#conocenos">Conócenos</a> 
-        </nav> 
-    </header> 
- 
-    <section id="inicio" class="hero-banner"> 
-        <h1>Tu Belleza en Buenas Manos</h1> 
-        <p>Cortes, uñas, pestañas y maquillaje profesional para cada ocasión.</p> 
-        <a href="#agendar" class="btn-primary">Agendar una Cita</a> 
-    </section> 
- 
-    <section id="servicios" class="section"> 
-        <h2 class="section-title">Nuestros Servicios</h2> 
-        <div class="services-grid"> 
-            <div class="service-card"> 
-                <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?
-auto=format&fit=crop&w=500&q=80" alt="Uñas"> 
-                <h3>Uñas & Manicura</h3> 
-                <p>Diseños personalizados, acrílico y esmaltado semipermanente.</p> 
-            </div> 
-            <div class="service-card"> 
-                <img src="https://marketplace.canva.com/EAGvPNCsDYw/1/0/450w/canva
-historia-de-instagram-promoci%C3%B3n-cejas-y-pesta%C3%B1as-moderno
-marr%C3%B3n-y-blanco-KFlaAIXH_rI.jpg" alt="Pestañas"> 
-                <h3>Pestañas & Cejas</h3> 
-                <p>Extensiones de pestañas pelo a pelo y diseño de cejas.</p> 
-            </div> 
-            <div class="service-card"> 
-                <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?
-auto=format&fit=crop&w=500&q=80" alt="Maquillaje"> 
-                <h3>Maquillaje Profesional</h3> 
-                <p>Para eventos, bodas y ocasiones especiales.</p> 
-            </div> 
-            <div class="service-card"> 
-                <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?
-auto=format&fit=crop&w=500&q=80" alt="Cortes"> 
-                <h3>Cortes de Pelo (M y F)</h3> 
-                <p>Estilos modernos y tradicionales para hombres y mujeres.</p> 
-            </div> 
-        </div> 
-    </section> 
- 
-    <section id="agendar" class="section"> 
-        <h2 class="section-title">Agendar Cita</h2> 
-        <div class="booking-container"> 
- 
-            <div class="card-box service-selection-box"> 
-                <h3>1. Selecciona un servicio</h3> 
-                <div class="service-options"> 
-                    <div class="service-opt active" data-name="Corte de Cabello" data-price="25"> 
-                        <strong>Corte de Cabello</strong> 
-                        <span>30 min - $25</span> 
-                    </div> 
-                    <div class="service-opt" data-name="Barba" data-price="15"> 
-                        <strong>Barba</strong> 
-                        <span>20 min - $15</span> 
-                    </div> 
-                    <div class="service-opt" data-name="Tinte de Cabello" data-price="40"> 
-                        <strong>Tinte</strong> 
-                        <span>45 min - $40</span> 
-                    </div> 
-                    <div class="service-opt" data-name="Uñas Acrílicas" data-price="35"> 
-                        <strong>Uñas Acrílicas</strong> 
-                        <span>60 min - $35</span> 
-                    </div> 
-                    <div class="service-opt" data-name="Pestañas Pelo a Pelo" data-price="50"> 
-                        <strong>Pestañas</strong> 
-                        <span>90 min - $50</span> 
-                    </div> 
-                </div> 
-            </div> 
- 
-            <div class="booking-grid"> 
- 
-                <div class="card-box"> 
-                    <div style="display: flex; justify-content: space-between; align-items: center; 
-gap: 10px; margin-bottom: 12px;"> 
-                        <h3 style="margin: 0;">2. Selecciona la fecha</h3> 
-                        <select id="monthSelect" style="padding: 6px 10px; border-radius: 6px; 
-border: 1px solid #ccc;"> 
-                            <option value="Ene" data-month-index="0">Enero</option> 
-                            <option value="Feb" data-month-index="1">Febrero</option> 
-                            <option value="Mar" data-month-index="2">Marzo</option> 
-                            <option value="Abr" data-month-index="3">Abril</option> 
-                            <option value="May" data-month-index="4">Mayo</option> 
-                            <option value="Jun" data-month-index="5">Junio</option> 
-                            <option value="Jul" data-month-index="6">Julio</option> 
-                            <option value="Ago" data-month-index="7">Agosto</option> 
-                            <option value="Sep" data-month-index="8">Septiembre</option> 
-                            <option value="Oct" data-month-index="9">Octubre</option> 
-                            <option value="Nov" data-month-index="10" selected>Noviembre</option> 
-                            <option value="Dic" data-month-index="11">Diciembre</option> 
-                        </select> 
-                    </div> 
- 
-                    <div class="calendar-grid" id="calendarGrid"> 
-                        <div class="day-name">LUN</div> 
-                        <div class="day-name">MAR</div> 
-                        <div class="day-name">MIE</div> 
-                        <div class="day-name">JUE</div> 
-                        <div class="day-name">VIE</div> 
-                        <div class="day-name">SAB</div> 
-                        <div class="day-name">DOM</div> 
-                        <!-- Días reales del mes generados con JavaScript --> 
-                    </div> 
-                </div> 
- 
-                <div class="card-box"> 
-                    <h3>3. Horarios disponibles</h3> 
-                    <div class="time-slots"> 
-                        <div class="slot" data-time="09:00 AM">09:00</div> 
-                        <div class="slot" data-time="09:30 AM">09:30</div> 
-                        <div class="slot" data-time="10:00 AM">10:00</div> 
-                        <div class="slot active" data-time="10:30 AM">10:30</div> 
-                        <div class="slot" data-time="11:00 AM">11:00</div> 
-                        <div class="slot" data-time="11:30 AM">11:30</div> 
-                        <div class="slot" data-time="12:00 PM">12:00</div> 
-                        <div class="slot" data-time="04:00 PM">16:00</div> 
-                        <div class="slot" data-time="04:30 PM">16:30</div> 
-                    </div> 
-                </div> 
- 
-            </div> 
- 
-            <div class="user-data"> 
-                <h3>4. Tus datos y confirmación</h3> 
-                <br> 
-                <div class="input-group"> 
-                    <input type="text" id="userName" placeholder="Nombre completo (Ej. María 
-García)" required> 
-                    <input type="tel" id="userPhone" placeholder="WhatsApp (Ej. 33 1234 5678)" 
-required> 
-                </div> 
- 
-                <div class="summary-bar"> 
-                    <span><strong>Servicio:</strong> <span id="summaryService">Corte de 
-Cabello</span></span> 
-                    <span><strong>Fecha y hora:</strong> <span id="summaryDate">1 Nov</
-span>, <span id="summaryTime">10:30 AM</span></span> 
-                    <span><strong>Total:</strong> $<span id="summaryPrice">25</span> USD</
-span> 
-                </div> 
- 
-                <button class="btn-confirm" id="btnConfirm">✔ Confirmar cita</button> 
-            </div> 
-        </div> 
-    </section> 
- 
-    <div class="modal-overlay" id="modalOverlay"> 
-        <div class="modal-card"> 
-            <div class="modal-icon">
-🎉
-</div> 
-            <h2>¡Cita Confirmada!</h2> 
-            <p>Hemos registrado tu reservación exitosamente.</p> 
-            <div class="modal-details"> 
-                <p><strong>Cliente:</strong> <span id="modalName"></span></p> 
-                <p><strong>WhatsApp:</strong> <span id="modalPhone"></span></p> 
-                <p><strong>Servicio:</strong> <span id="modalService"></span></p> 
-                <p><strong>Fecha:</strong> <span id="modalDate"></span> a las <span 
-id="modalTime"></span></p> 
-                <p><strong>Total a pagar:</strong> $<span id="modalPrice"></span> USD</p> 
-            </div> 
-            <button class="btn-primary" id="btnCloseModal">Aceptar y Cerrar</button> 
-        </div> 
-    </div> 
- 
-    <section id="conocenos" class="conocenos-simple"> 
-        <div class="conocenos-container"> 
-            <h2>Conócenos</h2> 
-            <p class="subtitulo">Conoce las mentes de este equipo</p> 
- 
-            <div class="imagen-equipo"> 
-                <img src="equpo.jpeg" alt="Equipo de trabajo"> 
-            </div> 
- 
-            <div class="lista-nombres-container"> 
-                <ul class="lista-nombres"> 
-                    <li>Ximena Vitela</li> 
-                    <li>Cintia Mora</li> 
-                    <li>Yisel Osegueda</li> 
-                    <li>Fatima Natali Rodriguez</li> 
-                </ul> 
-            </div> 
-        </div> 
-    </section> 
- 
-    <footer id="nosotros"> 
-        <h2>Elegancia Natural Estética</h2> 
-        <p>Brindándote la mejor atención y los mejores productos para cuidar tu imagen.</p> 
-        <p>
-📍
- Dirección: Av. Principal #123 | 
-�
-�
- Tel: +52 33 1234 5678</p> 
-        <p class="copyright">© 2026 Elegancia Natural - Todos los derechos reservados.</p> 
-    </footer> 
- 
-    <script> 
-        const STORAGE_KEY = 'elegancia_natural_citas_estaticas'; 
- 
-        const calendarGrid = document.getElementById('calendarGrid'); 
-        const monthSelect = document.getElementById('monthSelect'); 
- 
-        const summaryService = document.getElementById('summaryService'); 
-        const summaryDate = document.getElementById('summaryDate'); 
-        const summaryTime = document.getElementById('summaryTime'); 
-        const summaryPrice = document.getElementById('summaryPrice'); 
- 
-        const currentYear = new Date().getFullYear(); 
- 
-        let selectedService = "Corte de Cabello"; 
-        let selectedPrice = "25"; 
-        let selectedDayNum = 1; 
-        let selectedMonth = monthSelect.value; 
-        let selectedDate = `${selectedDayNum} ${selectedMonth}`; 
-        let selectedTime = "10:30 AM"; 
- 
-        // Cargar citas guardadas localmente en el navegador (sin servidor PHP/MySQL) 
-        function cargarOcupadosLocales() { 
-            try { 
-                const raw = localStorage.getItem(STORAGE_KEY); 
-                return raw ? JSON.parse(raw) : {}; 
-            } catch (e) { 
-                return {}; 
-            } 
-        } 
- 
-        function guardarOcupadoLocal(fecha, hora) { 
-            const mapa = cargarOcupadosLocales(); 
-            if (!Array.isArray(mapa[fecha])) { 
-                mapa[fecha] = []; 
-            } 
-            if (!mapa[fecha].includes(hora)) { 
-                mapa[fecha].push(hora); 
-            } 
-            localStorage.setItem(STORAGE_KEY, JSON.stringify(mapa)); 
-            ocupadosPorFecha = mapa; 
-        } 
- 
-        let ocupadosPorFecha = cargarOcupadosLocales(); 
- 
-        function obtenerDiasDelMes(monthIndex, year = currentYear) { 
-            return new Date(year, monthIndex + 1, 0).getDate(); 
-        } 
- 
-        function renderCalendarDays() { 
-            calendarGrid.querySelectorAll('.day-number').forEach(el => el.remove()); 
- 
-            const selectedOption = monthSelect.options[monthSelect.selectedIndex]; 
-            const monthIndex = Number(selectedOption.getAttribute('data-month-index')); 
-            selectedMonth = monthSelect.value; 
- 
-            const totalDias = obtenerDiasDelMes(monthIndex, currentYear); 
- 
-            if (selectedDayNum > totalDias) { 
-                selectedDayNum = totalDias; 
-            } 
- 
-            const totalSlots = document.querySelectorAll('.slot').length; 
- 
-            for (let dia = 1; dia <= totalDias; dia++) { 
-                const dayEl = document.createElement('div'); 
-                dayEl.className = 'day-number'; 
-                dayEl.setAttribute('data-day', `${dia} ${selectedMonth}`); 
-                dayEl.textContent = dia; 
- 
-                if (dia === selectedDayNum) { 
-                    dayEl.classList.add('active'); 
-                } 
- 
-                const horasDelDia = ocupadosPorFecha[`${dia} ${selectedMonth}`] || []; 
-                if (horasDelDia.length >= totalSlots && totalSlots > 0) { 
-                    const tag = document.createElement('span'); 
-                    tag.className = 'tag-busy'; 
-                    tag.textContent = 'Lleno'; 
-                    dayEl.appendChild(tag); 
-                } 
- 
-                dayEl.addEventListener('click', () => { 
-                    document.querySelectorAll('.day-number').forEach(d => 
-d.classList.remove('active')); 
-                    dayEl.classList.add('active'); 
- 
-                    selectedDayNum = dia; 
-                    selectedDate = `${selectedDayNum} ${selectedMonth}`; 
-                    actualizarHorariosDelDia(); 
-                    updateSummary(); 
-                }); 
- 
-                calendarGrid.appendChild(dayEl); 
-            } 
- 
-            selectedDate = `${selectedDayNum} ${selectedMonth}`; 
-            actualizarHorariosDelDia(); 
-            updateSummary(); 
-        } 
- 
-        function actualizarHorariosDelDia() { 
-            const horasOcupadas = ocupadosPorFecha[selectedDate] || []; 
-            const ocupadasSet = new Set(horasOcupadas); 
- 
-            const slots = Array.from(document.querySelectorAll('.slot')); 
- 
-            slots.forEach(slot => { 
-                const hora = slot.getAttribute('data-time'); 
-                slot.classList.remove('disabled', 'active'); 
-                slot.removeAttribute('title'); 
- 
-                if (ocupadasSet.has(hora)) { 
-                    slot.classList.add('disabled'); 
-                    slot.setAttribute('title', 'Hora ocupada en este día'); 
-                } 
-            }); 
- 
-            const slotActualLibre = slots.find(s => s.getAttribute('data-time') === selectedTime 
-&& !s.classList.contains('disabled')); 
- 
-            if (slotActualLibre) { 
-                slotActualLibre.classList.add('active'); 
-                selectedTime = slotActualLibre.getAttribute('data-time'); 
-            } else { 
-                const primerSlotLibre = slots.find(s => !s.classList.contains('disabled')); 
-                if (primerSlotLibre) { 
-                    primerSlotLibre.classList.add('active'); 
-                    selectedTime = primerSlotLibre.getAttribute('data-time'); 
-                } else { 
-                    selectedTime = "Sin horarios"; 
-                } 
-            } 
-        } 
- 
-        document.querySelectorAll('.service-opt').forEach(opt => { 
-            opt.addEventListener('click', () => { 
-                document.querySelectorAll('.service-opt').forEach(s => 
-s.classList.remove('active')); 
-                opt.classList.add('active'); 
- 
-                selectedService = opt.getAttribute('data-name'); 
-                selectedPrice = opt.getAttribute('data-price'); 
-                updateSummary(); 
-            }); 
-        }); 
- 
-        document.querySelectorAll('.slot').forEach(slot => { 
-            slot.addEventListener('click', () => { 
-                if (slot.classList.contains('disabled')) return; 
- 
-                document.querySelectorAll('.slot').forEach(s => s.classList.remove('active')); 
-                slot.classList.add('active'); 
- 
-                selectedTime = slot.getAttribute('data-time'); 
-                updateSummary(); 
-            }); 
-        }); 
- 
-        monthSelect.addEventListener('change', () => { 
-            renderCalendarDays(); 
-        }); 
- 
-        function updateSummary() { 
-            summaryService.textContent = selectedService; 
-            summaryDate.textContent = selectedDate; 
-            summaryTime.textContent = selectedTime; 
-            summaryPrice.textContent = selectedPrice; 
-        } 
- 
-        const btnConfirm = document.getElementById('btnConfirm'); 
-        const modalOverlay = document.getElementById('modalOverlay'); 
-        const btnCloseModal = document.getElementById('btnCloseModal'); 
- 
-        btnConfirm.addEventListener('click', () => { 
-            const nameInput = document.getElementById('userName').value.trim(); 
-            const phoneInput = document.getElementById('userPhone').value.trim(); 
- 
-            if (!nameInput || !phoneInput) { 
-                alert('Por favor ingresa tu nombre y número de WhatsApp para confirmar la cita.'); 
-                return; 
-            } 
- 
-            if (!selectedTime || selectedTime === "Sin horarios") { 
-                alert('No hay horarios disponibles en la fecha seleccionada.'); 
-                return; 
-            } 
- 
-            guardarOcupadoLocal(selectedDate, selectedTime); 
- 
-            document.getElementById('modalName').textContent = nameInput; 
-            document.getElementById('modalPhone').textContent = phoneInput; 
-            document.getElementById('modalService').textContent = selectedService; 
-            document.getElementById('modalDate').textContent = selectedDate; 
-            document.getElementById('modalTime').textContent = selectedTime; 
-            document.getElementById('modalPrice').textContent = selectedPrice; 
- 
-            modalOverlay.classList.add('active'); 
- 
-            document.getElementById('userName').value = ''; 
-            document.getElementById('userPhone').value = ''; 
- 
-            renderCalendarDays(); 
-        }); 
- 
-        btnCloseModal.addEventListener('click', () => { 
-            modalOverlay.classList.remove('active'); 
-        }); 
- 
-        renderCalendarDays(); 
-    </script> 
-</body> 
-</html> 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegancia Natural - Estética</title>
+    <link rel="stylesheet" href="stylos.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">✨ Elegancia Natural</div>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#agendar">Agendar Cita</a>
+            <a href="#nosotros">Sobre Nosotros</a>
+            <a href="#conocenos">Conócenos</a>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero-banner">
+        <h1>Tu Belleza en Buenas Manos</h1>
+        <p>Cortes, uñas, pestañas y maquillaje profesional para cada ocasión.</p>
+        <a href="#agendar" class="btn-primary">Agendar una Cita</a>
+    </section>
+
+    <section id="servicios" class="section">
+        <h2 class="section-title">Nuestros Servicios</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=500&q=80" alt="Uñas">
+                <h3>Uñas & Manicura</h3>
+                <p>Diseños personalizados, acrílico y esmaltado semipermanente.</p>
+            </div>
+            <div class="service-card">
+                <img src="https://marketplace.canva.com/EAGvPNCsDYw/1/0/450w/canva-historia-de-instagram-promoci%C3%B3n-cejas-y-pesta%C3%B1as-moderno-marr%C3%B3n-y-blanco-KFlaAIXH_rI.jpg" alt="Pestañas">
+                <h3>Pestañas & Cejas</h3>
+                <p>Extensiones de pestañas pelo a pelo y diseño de cejas.</p>
+            </div>
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=500&q=80" alt="Maquillaje">
+                <h3>Maquillaje Profesional</h3>
+                <p>Para eventos, bodas y ocasiones especiales.</p>
+            </div>
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=500&q=80" alt="Cortes">
+                <h3>Cortes de Pelo (M y F)</h3>
+                <p>Estilos modernos y tradicionales para hombres y mujeres.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="agendar" class="section">
+        <h2 class="section-title">Agendar Cita</h2>
+        <div class="booking-container">
+
+            <div class="card-box service-selection-box">
+                <h3>1. Selecciona un servicio</h3>
+                <div class="service-options">
+                    <div class="service-opt active" data-name="Corte de Cabello" data-price="25">
+                        <strong>Corte de Cabello</strong>
+                        <span>30 min - $25</span>
+                    </div>
+                    <div class="service-opt" data-name="Barba" data-price="15">
+                        <strong>Barba</strong>
+                        <span>20 min - $15</span>
+                    </div>
+                    <div class="service-opt" data-name="Tinte de Cabello" data-price="40">
+                        <strong>Tinte</strong>
+                        <span>45 min - $40</span>
+                    </div>
+                    <div class="service-opt" data-name="Uñas Acrílicas" data-price="35">
+                        <strong>Uñas Acrílicas</strong>
+                        <span>60 min - $35</span>
+                    </div>
+                    <div class="service-opt" data-name="Pestañas Pelo a Pelo" data-price="50">
+                        <strong>Pestañas</strong>
+                        <span>90 min - $50</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="booking-grid">
+
+                <div class="card-box">
+                    <div style="display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 12px;">
+                        <h3 style="margin: 0;">2. Selecciona la fecha</h3>
+                        <select id="monthSelect" style="padding: 6px 10px; border-radius: 6px; border: 1px solid #ccc;">
+                            <option value="Ene" data-month-index="0">Enero</option>
+                            <option value="Feb" data-month-index="1">Febrero</option>
+                            <option value="Mar" data-month-index="2">Marzo</option>
+                            <option value="Abr" data-month-index="3">Abril</option>
+                            <option value="May" data-month-index="4">Mayo</option>
+                            <option value="Jun" data-month-index="5">Junio</option>
+                            <option value="Jul" data-month-index="6">Julio</option>
+                            <option value="Ago" data-month-index="7">Agosto</option>
+                            <option value="Sep" data-month-index="8">Septiembre</option>
+                            <option value="Oct" data-month-index="9">Octubre</option>
+                            <option value="Nov" data-month-index="10" selected>Noviembre</option>
+                            <option value="Dic" data-month-index="11">Diciembre</option>
+                        </select>
+                    </div>
+
+                    <div class="calendar-grid" id="calendarGrid">
+                        <div class="day-name">LUN</div>
+                        <div class="day-name">MAR</div>
+                        <div class="day-name">MIE</div>
+                        <div class="day-name">JUE</div>
+                        <div class="day-name">VIE</div>
+                        <div class="day-name">SAB</div>
+                        <div class="day-name">DOM</div>
+                    </div>
+                </div>
+
+                <div class="card-box">
+                    <h3>3. Horarios disponibles</h3>
+                    <div class="time-slots">
+                        <div class="slot" data-time="09:00 AM">09:00</div>
+                        <div class="slot" data-time="09:30 AM">09:30</div>
+                        <div class="slot" data-time="10:00 AM">10:00</div>
+                        <div class="slot active" data-time="10:30 AM">10:30</div>
+                        <div class="slot" data-time="11:00 AM">11:00</div>
+                        <div class="slot" data-time="11:30 AM">11:30</div>
+                        <div class="slot" data-time="12:00 PM">12:00</div>
+                        <div class="slot" data-time="04:00 PM">16:00</div>
+                        <div class="slot" data-time="04:30 PM">16:30</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="user-data">
+                <h3>4. Tus datos y confirmación</h3>
+                <br>
+                <div class="input-group">
+                    <input type="text" id="userName" placeholder="Nombre completo (Ej. María García)" required>
+                    <input type="tel" id="userPhone" placeholder="WhatsApp (Ej. 33 1234 5678)" required>
+                </div>
+
+                <div class="summary-bar">
+                    <span><strong>Servicio:</strong> <span id="summaryService">Corte de Cabello</span></span>
+                    <span><strong>Fecha y hora:</strong> <span id="summaryDate">1 Nov</span>, <span id="summaryTime">10:30 AM</span></span>
+                    <span><strong>Total:</strong> $<span id="summaryPrice">25</span> USD</span>
+                </div>
+
+                <button class="btn-confirm" id="btnConfirm">✔ Confirmar cita</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-card">
+            <div class="modal-icon">🎉</div>
+            <h2>¡Cita Confirmada!</h2>
+            <p>Hemos registrado tu reservación exitosamente.</p>
+            <div class="modal-details">
+                <p><strong>Cliente:</strong> <span id="modalName"></span></p>
+                <p><strong>WhatsApp:</strong> <span id="modalPhone"></span></p>
+                <p><strong>Servicio:</strong> <span id="modalService"></span></p>
+                <p><strong>Fecha:</strong> <span id="modalDate"></span> a las <span id="modalTime"></span></p>
+                <p><strong>Total a pagar:</strong> $<span id="modalPrice"></span> USD</p>
+            </div>
+            <button class="btn-primary" id="btnCloseModal">Aceptar y Cerrar</button>
+        </div>
+    </div>
+
+    <section id="conocenos" class="conocenos-simple">
+        <div class="conocenos-container">
+            <h2>Conócenos</h2>
+            <p class="subtitulo">Conoce las mentes de este equipo</p>
+
+            <div class="imagen-equipo">
+                <img src="equpo.jpeg" alt="Equipo de trabajo">
+            </div>
+
+            <div class="lista-nombres-container">
+                <ul class="lista-nombres">
+                    <li>Ximena Vitela</li>
+                    <li>Cintia Mora</li>
+                    <li>Yisel Osegueda</li>
+                    <li>Fatima Natali Rodriguez</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer id="nosotros">
+        <h2>Elegancia Natural Estética</h2>
+        <p>Brindándote la mejor atención y los mejores productos para cuidar tu imagen.</p>
+        <p>📍 Dirección: Av. Principal #123 | 📞 Tel: +52 33 1234 5678</p>
+        <p class="copyright">© 2026 Elegancia Natural - Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        const STORAGE_KEY = 'elegancia_natural_citas_estaticas';
+
+        const calendarGrid = document.getElementById('calendarGrid');
+        const monthSelect = document.getElementById('monthSelect');
+
+        const summaryService = document.getElementById('summaryService');
+        const summaryDate = document.getElementById('summaryDate');
+        const summaryTime = document.getElementById('summaryTime');
+        const summaryPrice = document.getElementById('summaryPrice');
+
+        const currentYear = new Date().getFullYear();
+
+        let selectedService = "Corte de Cabello";
+        let selectedPrice = "25";
+        let selectedDayNum = 1;
+        let selectedMonth = monthSelect.value;
+        let selectedDate = `${selectedDayNum} ${selectedMonth}`;
+        let selectedTime = "10:30 AM";
+
+        function cargarOcupadosLocales() {
+            try {
+                const raw = localStorage.getItem(STORAGE_KEY);
+                return raw ? JSON.parse(raw) : {};
+            } catch (e) {
+                return {};
+            }
+        }
+
+        function guardarOcupadoLocal(fecha, hora) {
+            const mapa = cargarOcupadosLocales();
+            if (!Array.isArray(mapa[fecha])) {
+                mapa[fecha] = [];
+            }
+            if (!mapa[fecha].includes(hora)) {
+                mapa[fecha].push(hora);
+            }
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(mapa));
+            ocupadosPorFecha = mapa;
+        }
+
+        let ocupadosPorFecha = cargarOcupadosLocales();
+
+        function obtenerDiasDelMes(monthIndex, year = currentYear) {
+            return new Date(year, monthIndex + 1, 0).getDate();
+        }
+
+        function renderCalendarDays() {
+            calendarGrid.querySelectorAll('.day-number').forEach(el => el.remove());
+
+            const selectedOption = monthSelect.options[monthSelect.selectedIndex];
+            const monthIndex = Number(selectedOption.getAttribute('data-month-index'));
+            selectedMonth = monthSelect.value;
+
+            const totalDias = obtenerDiasDelMes(monthIndex, currentYear);
+
+            if (selectedDayNum > totalDias) {
+                selectedDayNum = totalDias;
+            }
+
+            const totalSlots = document.querySelectorAll('.slot').length;
+
+            for (let dia = 1; dia <= totalDias; dia++) {
+                const dayEl = document.createElement('div');
+                dayEl.className = 'day-number';
+                dayEl.setAttribute('data-day', `${dia} ${selectedMonth}`);
+                dayEl.textContent = dia;
+
+                if (dia === selectedDayNum) {
+                    dayEl.classList.add('active');
+                }
+
+                const horasDelDia = ocupadosPorFecha[`${dia} ${selectedMonth}`] || [];
+                if (horasDelDia.length >= totalSlots && totalSlots > 0) {
+                    const tag = document.createElement('span');
+                    tag.className = 'tag-busy';
+                    tag.textContent = 'Lleno';
+                    dayEl.appendChild(tag);
+                }
+
+                dayEl.addEventListener('click', () => {
+                    document.querySelectorAll('.day-number').forEach(d => d.classList.remove('active'));
+                    dayEl.classList.add('active');
+
+                    selectedDayNum = dia;
+                    selectedDate = `${selectedDayNum} ${selectedMonth}`;
+                    actualizarHorariosDelDia();
+                    updateSummary();
+                });
+
+                calendarGrid.appendChild(dayEl);
+            }
+
+            selectedDate = `${selectedDayNum} ${selectedMonth}`;
+            actualizarHorariosDelDia();
+            updateSummary();
+        }
+
+        function actualizarHorariosDelDia() {
+            const horasOcupadas = ocupadosPorFecha[selectedDate] || [];
+            const ocupadasSet = new Set(horasOcupadas);
+
+            const slots = Array.from(document.querySelectorAll('.slot'));
+
+            slots.forEach(slot => {
+                const hora = slot.getAttribute('data-time');
+                slot.classList.remove('disabled', 'active');
+                slot.removeAttribute('title');
+
+                if (ocupadasSet.has(hora)) {
+                    slot.classList.add('disabled');
+                    slot.setAttribute('title', 'Hora ocupada en este día');
+                }
+            });
+
+            const slotActualLibre = slots.find(s => s.getAttribute('data-time') === selectedTime && !s.classList.contains('disabled'));
+
+            if (slotActualLibre) {
+                slotActualLibre.classList.add('active');
+                selectedTime = slotActualLibre.getAttribute('data-time');
+            } else {
+                const primerSlotLibre = slots.find(s => !s.classList.contains('disabled'));
+                if (primerSlotLibre) {
+                    primerSlotLibre.classList.add('active');
+                    selectedTime = primerSlotLibre.getAttribute('data-time');
+                } else {
+                    selectedTime = "Sin horarios";
+                }
+            }
+        }
+
+        document.querySelectorAll('.service-opt').forEach(opt => {
+            opt.addEventListener('click', () => {
+                document.querySelectorAll('.service-opt').forEach(s => s.classList.remove('active'));
+                opt.classList.add('active');
+
+                selectedService = opt.getAttribute('data-name');
+                selectedPrice = opt.getAttribute('data-price');
+                updateSummary();
+            });
+        });
+
+        document.querySelectorAll('.slot').forEach(slot => {
+            slot.addEventListener('click', () => {
+                if (slot.classList.contains('disabled')) return;
+
+                document.querySelectorAll('.slot').forEach(s => s.classList.remove('active'));
+                slot.classList.add('active');
+
+                selectedTime = slot.getAttribute('data-time');
+                updateSummary();
+            });
+        });
+
+        monthSelect.addEventListener('change', () => {
+            renderCalendarDays();
+        });
+
+        function updateSummary() {
+            summaryService.textContent = selectedService;
+            summaryDate.textContent = selectedDate;
+            summaryTime.textContent = selectedTime;
+            summaryPrice.textContent = selectedPrice;
+        }
+
+        const btnConfirm = document.getElementById('btnConfirm');
+        const modalOverlay = document.getElementById('modalOverlay');
+        const btnCloseModal = document.getElementById('btnCloseModal');
+
+        btnConfirm.addEventListener('click', () => {
+            const nameInput = document.getElementById('userName').value.trim();
+            const phoneInput = document.getElementById('userPhone').value.trim();
+
+            if (!nameInput || !phoneInput) {
+                alert('Por favor ingresa tu nombre y número de WhatsApp para confirmar la cita.');
+                return;
+            }
+
+            if (!selectedTime || selectedTime === "Sin horarios") {
+                alert('No hay horarios disponibles en la fecha seleccionada.');
+                return;
+            }
+
+            guardarOcupadoLocal(selectedDate, selectedTime);
+
+            document.getElementById('modalName').textContent = nameInput;
+            document.getElementById('modalPhone').textContent = phoneInput;
+            document.getElementById('modalService').textContent = selectedService;
+            document.getElementById('modalDate').textContent = selectedDate;
+            document.getElementById('modalTime').textContent = selectedTime;
+            document.getElementById('modalPrice').textContent = selectedPrice;
+
+            modalOverlay.classList.add('active');
+
+            document.getElementById('userName').value = '';
+            document.getElementById('userPhone').value = '';
+
+            renderCalendarDays();
+        });
+
+        btnCloseModal.addEventListener('click', () => {
+            modalOverlay.classList.remove('active');
+        });
+
+        renderCalendarDays();
+    </script>
+</body>
+</html>
